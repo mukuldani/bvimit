@@ -1,0 +1,37 @@
+/*Navigation Bar*/
+.navbar {
+	height: 115px;
+	width: 100%;
+}
+
+.navbar>div{
+	background: #676262;
+}
+
+.navbar-fixed-top {
+	top: 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	color: #000;
+}
+
+.navbar .navbar-collapse {
+	min-width: 755px;
+	width: 75%;
+}
+
+.navbar .navbar-hearder .bvimit_logo {
+	height: 110px;
+}
+
+.navbar .navbar-collapse .bvimit_name {
+	height: 72px
+}
+
+.navbar .navbar-collapse .bvimit_name_text {
+	font-size: 1.4em;
+	line-height: 0.8em;
+	word-spacing: 0.1em;
+	color: #f29800;
+}
