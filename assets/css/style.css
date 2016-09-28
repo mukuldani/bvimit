@@ -2,11 +2,10 @@
 
 nav,
 .navbar {
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(255, 255, 255, 0.6);
 }
 
 .navbar {
-	height: 115px;
 	width: 100%;
 }
 
@@ -18,18 +17,12 @@ nav,
 	color: #000;
 }
 
-.navbar>.container .navbar-brand {
-	margin-left: -100px;
-}
-
 .navbar .navbar-collapse {
-	min-width: 755px;
-	width: 83%;
+	min-width: 1037px;
 }
 
 .navbar .navbar-hearder .bvimit_logo {
-	height: 110px;
-	top: 0;
+	height: 190px;
 	margin-top: -10px;
 }
 
@@ -44,7 +37,20 @@ nav,
 .navbar .navbar-collapse .bvimit_name_text {
 	font-size: 1.4em;
 	line-height: 0.8em;
-	color: #f29800;
+	color: #f3d082;
+}
+
+.navbar-default .nav li a {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1.4em;
+	letter-spacing: 1px;
+	color: #000;
+}
+
+nav.navbar-default .navbar-collapse>ul>li.active>a {
+	background-color: #f3d082;
+	color: #000;
 }
 
 
@@ -52,7 +58,7 @@ nav,
 
 .home_carousel {
 	position: absolute;
-	top: 115px;
+	top: 169px;
 	width: 100%;
 	max-height: 1080px;
 	z-index: -1;

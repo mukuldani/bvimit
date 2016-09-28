@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 	<meta charset="utf-8">
@@ -21,23 +22,34 @@
 
 	<!--Navigation Bar-->
 	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
+		<div class="container" style="width:100%; margin:0;">
 			<div class="navbar-hearder pull-left">
-				<a class="navbar-brand page-scroll" href="index.php">
-					<img src="assets/images/bvimit_logo.png" class="bvimit_logo img-responsive">
+				<a class="navbar-brand page-scroll" href="index.html">
+					<img src="assets/images/bvimit_logo.png" class="bvimit_logo img-responsive" />
 				</a>
 
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-fields" style="top:2px;">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-fields">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
 			</div>
-			<div class="navbar-collapse collapse pull-right" id="navigation-fields">
-				<img src="assets/images/bvimit_name.png" class="bvimit_name img-responsive">
+			<div class="navbar-collapse collapse pull-right">
+				<img src="assets/images/bvimit_name.png" class="bvimit_name img-responsive" />
 				<div class="bvimit_name_text navbar-text">
 					Institute of Management and Information Technology, Navi Mumbai
 				</div>
+			</div>
+			<div class="navbar-collapse  collapse" id="navigation-fields">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"> <a href="#"> HOME </a> </li>
+					<li> <a href="#"> ABOUT US </a> </li>
+					<li> <a href="#"> ADIMISSION </a> </li>
+					<li> <a href="#"> ACADEMICS </a> </li>
+					<li> <a href="#"> STUDENTS CORNER </a> </li>
+					<li> <a href="#"> CAMPUS </a> </li>
+					<li> <a href="#"> CONTACT US </a> </li>
+				</ul>
 			</div>
 		</div>
 	</nav>
@@ -106,12 +118,10 @@
 				</a>
 			</div>
 		</div>
-
 	</div>
-	
+
 	<!--News and Reports-->
-<!--
-	<section>
+	<section id="news">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
@@ -129,8 +139,6 @@
 			</div>
 		</div>
 	</section>
--->
-
 </body>
 
 </html>
