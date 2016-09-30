@@ -1,29 +1,42 @@
+/*Common Classes*/
+
+.padding-15 {
+	padding: 15px;
+}
+
+.padding-50 {
+	padding: 50px;
+}
+
+.padding-60 {
+	padding: 60px 0;
+}
+
+.bg-grey {
+	background-color: lightgrey;
+}
+
+
 /*Navigation Bar*/
 
 nav,
 .navbar {
-	background: rgba(255, 255, 255, 0.6);
+	background: rgba(255, 255, 255, 0.9);
 }
 
 .navbar {
 	width: 100%;
 }
 
-.navbar-fixed-top {
-	top: 0px;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	color: #000;
+.navbar-default {
+	-webkit-transition: padding .3s;
+	-moz-transition: padding .3s;
+	transition: padding .3s;
+	border: 0;
 }
 
 .navbar .navbar-collapse {
 	min-width: 1037px;
-}
-
-.navbar .navbar-hearder .bvimit_logo {
-	height: 190px;
-	margin-top: -10px;
 }
 
 .navbar-brand>img {
@@ -32,6 +45,30 @@ nav,
 
 .navbar .navbar-collapse .bvimit_name {
 	height: 72px
+}
+
+.navbar-logo {
+	height: 190px;
+}
+
+@media(min-width:768px) {
+	.navbar-default .navbar-brand {
+		font-size: 2em;
+		-webkit-transition: all .3s;
+		-moz-transition: all .3s;
+		transition: all .3s;
+	}
+	.navbar-default.navbar-shrink .navbar-brand {
+		font-size: 1.5em
+	}
+	.navbar-logo {
+		height: 190px;
+	}
+	/*
+	.navbar-default.navbar-shrink .navbar-logo {
+		height: 89px;
+	}
+*/
 }
 
 .navbar .navbar-collapse .bvimit_name_text {
@@ -43,12 +80,12 @@ nav,
 .navbar-default .nav li a {
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 1.4em;
+	font-size: 1.35em;
 	letter-spacing: 1px;
 	color: #000;
 }
 
-nav.navbar-default .navbar-collapse>ul>li.active>a {
+.navbar-default .navbar-nav .active>a {
 	background-color: #f3d082;
 	color: #000;
 }
@@ -57,9 +94,97 @@ nav.navbar-default .navbar-collapse>ul>li.active>a {
 /*Home Coarousel*/
 
 .home_carousel {
-	position: absolute;
-	top: 169px;
+	position: relative;
+	padding-top: 169px;
 	width: 100%;
 	max-height: 1080px;
 	z-index: -1;
+}
+
+
+/*News & Notices*/
+
+.notices_heading {
+	background-color: #f3d082;
+	font-size: 1.2em;
+	font-weight: 600;
+	text-align: justify;
+	padding: 10px;
+	border-radius: 7px;
+}
+
+.notices {
+	list-style-type: none;
+	text-align: justify;
+	font-size: 1em;
+	padding-left: 0px;
+	padding: 15px;
+}
+
+.notices_text {
+	padding: 8px 0 8px 0;
+	border-bottom: 1px solid #efefef;
+}
+
+
+/*Footer*/
+
+footer {
+	background-color: #141414 !important;
+	color: #fff;
+}
+
+footer .wrapper {
+	max-width: 95%;
+	margin: 0 auto;
+	padding: 70px 0 50px;
+}
+
+footer .wrapper .footer-heading {
+	font-size: 1.7em;
+}
+
+.list-unstyled>li {
+	line-height: 2;
+}
+
+.list-unstyled>li>a {
+	font-size: 1em;
+	color: #fff;
+	text-decoration: none;
+}
+
+.list-unstyled>li>a:hover {
+	display: inline-block;
+	vertical-align: middle;
+	border-bottom: 3px solid #f3d082;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	overflow: hidden;
+}
+
+.footer-logo {
+	background-image: url(../images/bvimit_logo.png);
+	width: 98%;
+	height: 100px;
+	background-repeat: no-repeat;
+	background-size: auto 150px;
+	background-position: center center;
+	pointer-events: none;
+	background-size: cover;
+}
+
+footer .sub-footer {
+	max-width: 100%;
+	margin: 0 auto;
+	background-color: black;
+	text-align: center;
+	color: aliceblue;
+	font-size: 0.85em;
+	padding: 10px 0;
 }
