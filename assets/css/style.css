@@ -4,6 +4,10 @@
 	padding: 15px;
 }
 
+.padding-25 {
+	padding: 25px;
+}
+
 .padding-50 {
 	padding: 50px;
 }
@@ -12,8 +16,228 @@
 	padding: 60px 0;
 }
 
+.padding-left-0 {
+	padding-left: 0;
+}
+
 .bg-grey {
 	background-color: lightgrey;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+.line-height-2 {
+	line-height: 2;
+}
+
+.line-height-5 {
+	line-height: 5;
+}
+
+.bottom-25 {
+	bottom: 25px !important;
+}
+
+.general-bg {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.border-light-yellow {
+	border: 2px solid #f3d082;
+}
+
+
+/*-----------------------------------ANIMATION STYLES---------------------------------------------*/
+
+a.arrow-down {
+	z-index: 999;
+	display: block;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+	width: 61px;
+	height: 64px;
+	margin: auto;
+	background: url(../images/arrow-down.png) no-repeat 0 0;
+	position: absolute;
+	bottom: 175px;
+	left: 48%;
+	cursor: pointer;
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	-ms-animation-name: bounce;
+	animation-name: bounce;
+	-webkit-animation-direction: normal;
+	-moz-animation-direction: normal;
+	-o-animation-direction: normal;
+	-ms-animation-direction: normal;
+	animation-direction: normal;
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-o-animation-duration: 2s;
+	-ms-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+@-moz-keyframes bounce {
+	0% {
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+	20% {
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-moz-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	50% {
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+	60% {
+		-moz-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+	80% {
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	20% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	50% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+	80% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+@-o-keyframes bounce {
+	0% {
+		-o-transform: translateY(0);
+		transform: translateY(0);
+	}
+	20% {
+		-o-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-o-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	50% {
+		-o-transform: translateY(0);
+		transform: translateY(0);
+	}
+	60% {
+		-o-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+	80% {
+		-o-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		-o-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+@-ms-keyframes bounce {
+	0% {
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	20% {
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-ms-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	50% {
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	60% {
+		-ms-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+	80% {
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-30px);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	60% {
+		transform: translateY(-15px);
+	}
+	80% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 
@@ -142,6 +366,7 @@ footer .wrapper {
 
 footer .wrapper .footer-heading {
 	font-size: 1.7em;
+	line-height: 2;
 }
 
 .list-unstyled>li {
@@ -187,4 +412,63 @@ footer .sub-footer {
 	color: aliceblue;
 	font-size: 0.85em;
 	padding: 10px 0;
+}
+
+.mailto,
+.mailto:hover,
+.mailto:after {
+	color: #fff;
+	text-decoration: none;
+}
+
+footer .wrapper .social-icons>a {
+	padding: 7px;
+	color: #fff;
+	margin-left: 20px;
+}
+
+footer .wrapper .social-iocns>a>fa {
+	vertical-align: middle;
+	transition: color .3s ease-in-out;
+}
+
+footer .wrapper .social-iocns>a>.fa-facebook {
+	color: #3B5998;
+}
+
+footer .wrapper .social-iocns>a>.fa-twitter:hover {
+	color: #4099FF;
+}
+
+footer .wrapper .social-iocns>a>.fa-rss:hover {
+	color: #F15200;
+}
+
+
+/*About Us Page*/
+
+.cover-aboutus {
+	background-image: url(../images/sli-base.jpg);
+	height: 400px;
+}
+
+.aboutus-text {
+	font-size: 1.1em;
+	color: #000;
+	text-align: justify;
+}
+
+.aboutus-college {
+	background-image: url(../images/college_infra.jpg);
+	height: 150px;
+}
+
+.founder-bg {
+	background-image: url(../images/staff/founder.jpg);
+	height: 320px;
+}
+
+.director-bg{
+	background-image: url(../images/staff/director.jpg);
+	height: 320px;
 }
