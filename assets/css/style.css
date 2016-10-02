@@ -16,6 +16,10 @@
 	padding: 60px 0;
 }
 
+.padding-top-20 {
+	padding-top: 20px;
+}
+
 .padding-left-0 {
 	padding-left: 0;
 }
@@ -304,8 +308,7 @@ nav,
 .navbar-default .nav li a {
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 1.35em;
-	letter-spacing: 1px;
+	font-size: 1.4em;
 	color: #000;
 }
 
@@ -468,7 +471,34 @@ footer .wrapper .social-iocns>a>.fa-rss:hover {
 	height: 320px;
 }
 
-.director-bg{
+.director-bg {
 	background-image: url(../images/staff/director.jpg);
 	height: 320px;
+}
+
+
+/*Admissions*/
+
+.cover-admissions {
+	background-image: url(../images/admissions-banner.jpg);
+	height: 390px;
+}
+
+
+/*Academics Banner*/
+
+.cover-academics {
+	background-image: url(../images/academics-banner.jpg);
+	height: 390px;
+}
+
+.bg-aboutmca {
+	background-image: url(../images/about-mca.jpg);
+	height: 320px;
+}
+
+.academics-text {
+	font-size: 1.1em;
+	color: #000;
+	text-align: justify;
 }
