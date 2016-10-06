@@ -1,7 +1,23 @@
 /*Common Classes*/
 
+.padding-5 {
+	padding: 5px;
+}
+
+.padding-10 {
+	padding: 10px;
+}
+
 .padding-15 {
 	padding: 15px;
+}
+
+.padding-15 {
+	padding: 15px;
+}
+
+.padding-20 {
+	padding: 20px;
 }
 
 .padding-25 {
@@ -24,12 +40,36 @@
 	padding-left: 0;
 }
 
+.padding-bottom-10 {
+	padding-bottom: 10px;
+}
+
 .bg-grey {
 	background-color: lightgrey;
 }
 
+.text-black {
+	color: #000;
+}
+
 .text-bold {
 	font-weight: bold;
+}
+
+.text-small {
+	font-size: 1.1em;
+}
+
+.text-medium {
+	font-size: 1.4em;
+}
+
+.text-large {
+	font-size: 1.7em;
+}
+
+.text-extra-large {
+	font-size: 2em;
 }
 
 .line-height-2 {
@@ -485,7 +525,7 @@ footer .wrapper .social-iocns>a>.fa-rss:hover {
 }
 
 
-/*Academics Banner*/
+/*Academics*/
 
 .cover-academics {
 	background-image: url(../images/academics-banner.jpg);
@@ -501,4 +541,205 @@ footer .wrapper .social-iocns>a>.fa-rss:hover {
 	font-size: 1.1em;
 	color: #000;
 	text-align: justify;
+}
+
+
+/*Placements*/
+
+.cover-placemnts {
+	background-image: url(../images/placements2.jpg);
+	height: 400px;
+}
+
+.placemnt-intro {
+	background-image: url(../images/placement-intro.jpg);
+	height: 150px;
+}
+
+.placement-text {
+	font-size: 1.1em;
+	color: #000;
+	text-align: justify;
+}
+
+.placement-aptitude {
+	padding: 1px 20px;
+}
+
+.placement-faculty-member-1 {
+	background-image: url(../images/staff/suhasini_Vijaykumar.JPG);
+	height: 180px;
+}
+
+placement-faculty-member-2 {
+	background-image: url(../images/staff/Varsha_Sharma.JPG);
+	height: 180px;
+}
+
+placement-faculty-member-3 {
+	background-image: url(../images/staff/Divya_Premchandran.JPG);
+	height: 180px;
+}
+
+placement-faculty-member-4 {
+	background-image: url(../images/staff/Zahir_J.Mulani.JPG);
+	height: 180px;
+}
+
+
+/*Faculty Page*/
+
+.cover-faculty {
+	background-image: url(../images/faculty.jpg);
+	height: 430px;
+}
+
+.faculty-text {
+	font-size: 1.1em;
+	color: #000;
+	text-align: justify;
+}
+
+
+/*Contact Us*/
+
+.cover-contactus {
+	background-image: url(../images/contact-us.png);
+	height: 400px;
+}
+
+.contactus-text {
+	width: 100%;
+	padding: 50px;
+}
+
+.col-center-contactus {
+	display: flex;
+	justify-content: center;
+}
+
+.group {
+	position: relative;
+	margin-bottom: 30px;
+	font-size: 1.2em;
+}
+
+input {
+	font-size: 1.2em;
+	padding: 10px 10px 10px 10px;
+	display: block;
+	width: 100%;
+	border: none;
+	background: transparent;
+	color: #000;
+	border-bottom: 1px solid #757575;
+}
+
+input:focus {
+	outline: none;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+	top: -20px;
+	font-size: 1.2em;
+	color: #000;
+}
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+	width: 50%;
+}
+
+input:focus ~ .highlight {
+	-webkit-animation: inputHighlighter 0.4s ease;
+	-moz-animation: inputHighlighter 0.4s ease;
+	animation: inputHighlighter 0.4s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+	from {
+		background: #000;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@-moz-keyframes inputHighlighter {
+	from {
+		background: #000;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@keyframes inputHighlighter {
+	from {
+		background: #000;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+.btn-color {
+	background-color: #f2cf0b;
+	font-family: 'Open Sans';
+	font-size: 1.1em;
+}
+
+label {
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: 0.3s ease all;
+	-moz-transition: 0.3s ease all;
+	-webkit-transition: 0.3s ease all;
+}
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.bar:before,
+.bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #000;
+	transition: 0.3s ease all;
+	-moz-transition: 0.3s ease all;
+	-webkit-transition: 0.3s ease all;
+}
+
+.bar:before {
+	left: 50%;
+}
+
+.bar:after {
+	right: 50%;
+}
+
+.highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
 }
