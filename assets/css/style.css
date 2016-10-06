@@ -91,6 +91,10 @@
 	position: relative;
 }
 
+.border-black {
+	border: 1px solid #000000;
+}
+
 .border-light-yellow {
 	border: 2px solid #f3d082;
 }
@@ -305,6 +309,15 @@ nav,
 
 .navbar .navbar-collapse {
 	min-width: 1037px;
+}
+
+.navbar .navbar-collapse .btn-login{
+	font-size: 1.5em;
+	color: #000;
+	background-color: #f3d082;
+	padding: 8px 16px 8px 16px;
+	float: right;
+	margin-top: -15px;
 }
 
 .navbar-brand>img {
@@ -689,7 +702,6 @@ input:focus ~ .highlight {
 
 .btn-color {
 	background-color: #f2cf0b;
-	font-family: 'Open Sans';
 	font-size: 1.1em;
 }
 
