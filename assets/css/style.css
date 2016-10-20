@@ -12,10 +12,6 @@
 	padding: 15px;
 }
 
-.padding-15 {
-	padding: 15px;
-}
-
 .padding-20 {
 	padding: 20px;
 }
@@ -48,6 +44,10 @@
 	background-color: lightgrey;
 }
 
+.bg-light-orange {
+	background-color: rgba(243, 208, 130, 0.11);
+}
+
 .text-black {
 	color: #000;
 }
@@ -70,6 +70,14 @@
 
 .text-extra-large {
 	font-size: 2em;
+}
+
+.no-underline {
+	text-decoration: none;
+}
+
+.pointer-cursur {
+	cursor: pointer;
 }
 
 .line-height-2 {
@@ -311,13 +319,14 @@ nav,
 	min-width: 1037px;
 }
 
-.navbar .navbar-collapse .btn-login{
-	font-size: 1.5em;
+.navbar .navbar-collapse .btn-login {
+	font-size: 1em;
 	color: #000;
 	background-color: #f3d082;
-	padding: 8px 16px 8px 16px;
+	padding: 8px 14px 8px 14px;
 	float: right;
 	margin-top: -15px;
+	font-weight: 600;
 }
 
 .navbar-brand>img {
