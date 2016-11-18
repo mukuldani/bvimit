@@ -12,7 +12,7 @@
 
 				// Form Validation
 				$errors = array();
-				$required_fields = array('notice_words', 'notice_category');
+				$required_fields = array('notice_title','notice_words', 'notice_category');
 				$errors = array_merge($errors, check_required_field_errors($required_fields));
 
 				if (!empty($errors)) {
@@ -21,6 +21,7 @@
 
 				$notice_words = mysql_prep($_POST['notice_words']);
 				$notice_category = mysql_prep($_POST['notice_category']);
+				$notice_title = mysql_prep($_POST['notice_title']);
 
 				$date = date("Y-m-d");
 
@@ -38,7 +39,7 @@
 //						echo "Return Code: " . $_FILES["notice_file"]["error"] . "<br>";
 //					}else{
 							//$data = real_escape_string(file_get_contents($_FILES['notice_file']['tmp_name']));
-							$sql = "Insert into notice (notice_category, notice_words, date_uploaded) values('$notice_category', '$notice_words', '$date')";
+							$sql = "Insert into notice (notice_title, notice_category, notice_words, date_uploaded) values('$notice_title', '$notice_category', '$notice_words', '$date')";
 
 							if(mysqli_query($connection, $sql)){
 								echo '<script language="javascript"> alert("Record added Succesfully"); </script>';
@@ -64,6 +65,14 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="group">
+									<input type="text" required id="notice_title" name="notice_title" />
+									<span class="highlight"></span>
+									<span class="bar"></span>
+									<label>NOTICE TITLE</label>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="group">
 									<input type="text" required id="notice_words" name="notice_words" />
 									<span class="highlight"></span>
 									<span class="bar"></span>
@@ -83,8 +92,8 @@
 									<select type="text" required id="notice_category" name="notice_category">
 										<option class="default"></option>
 										<option>General Notice</option>
-										<option>AdmissionsNotice</option>
-										<option>Examinations &amp; Results Notice</option>
+										<option>Admissions Notice</option>
+										<option>Examinations &amp; Results</option>
 									</select>
 									<span class="highlight"></span>
 									<span class="bar"></span>

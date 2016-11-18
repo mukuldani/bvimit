@@ -57,27 +57,24 @@
 	<div class="container-fluid admin-page" style="padding-top:118px;">
 		<div class="row">
 			<div class="col-md-3" style="padding-left: 0;">
-				<ul class="list-unstyled list-nav">
+				<ul class="list-unstyled list-nav admin_menu">
 					<li><a href="admin_addUser.php"> Add User </a></li>
-					<li><a href="#"> Show User </a></li>
+					<li><a href="admin_showUser.php"> Show User </a></li>
 
 					<li><a href="admin_addNotice.php"> Add Notice </a></li>
-					<li><a href="#"> Show Notices </a></li>
+					<li><a href="admin_showNotice.php"> Show Notices </a></li>
 
-					<!--
-					<li><a href="#"> Add Faculty Details </a></li>
-					<li><a href="#"> Show Faculty Details </a></li>
--->
-
-					<li><a href="admin_admissions.php"> Admissions &amp; Eligibility </a></li>
+<!--					<li><a href="admin_admissions.php"> Admissions &amp; Eligibility </a></li>-->
 
 					<li><a href="admin_addPlacedStudents.php"> Add Placed Students </a></li>
-					<li><a href="#"> Show Placed Students </a></li>
+					<li><a href="admin_showPlacedStudents.php"> Show Placed Students </a></li>
 					<li><a href="admin_addPlacementPartners.php"> Add Placement Partners </a></li>
-					<li><a href="#"> Show Placement Partners </a></li>
+					<li><a href="admin_showPlacementPartner.php"> Show Placement Partners </a></li>
 
 					<li><a href="admin_addDocument.php"> Add Documents </a></li>
-					<li><a href="#"> Show Documents </a></li>
+					<li><a href="admin_showDocument.php"> Show Documents </a></li>
+
+					<li><a href="admin_showFaculties.php"> Show Faculties </a></li>
 
 					<li><a href="admin_changePassword.php"> Change Password </a></li>
 

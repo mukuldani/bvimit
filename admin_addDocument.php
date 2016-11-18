@@ -13,13 +13,14 @@
 
 				// Form Validation
 				$errors = array();
-				$required_fields = array('document_type');
+				$required_fields = array('document_title','document_type');
 				$errors = array_merge($errors, check_required_field_errors($required_fields));
 
 				if (!empty($errors)) {
 					display_errors($errors);
 				}
 
+				$document_title = mysql_prep($_POST['document_title']);
 				$document_type = mysql_prep($_POST['document_type']);
 				$date = date("Y-m-d");
 
@@ -39,7 +40,7 @@
 //						echo "Return Code: " . $_FILES["notice_file"]["error"] . "<br>";
 //					}else{
 							//$data = real_escape_string(file_get_contents($_FILES['notice_file']['tmp_name']));
-							$sql = "Insert into document (document_file, document_type, document_date) values('','$document_type','$date')";
+							$sql = "Insert into document (document_title, document_file, document_type, document_date) values('$document_title','','$document_type','$date')";
 
 							if(mysqli_query($connection, $sql)){
 								echo '<script language="javascript"> alert("Docuement added Succesfully"); </script>';
@@ -61,6 +62,14 @@
 					</legend>
 					<form name="Form" class="padding-10" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="off">
 						<div class="row">
+							<div class="col-md-12">
+								<div class="group">
+									<input type="text" required id="document_title" name="document_title" />
+									<span class="highlight"></span>
+									<span class="bar"></span>
+									<label>DOCUMENT TITLE</label>
+								</div>
+							</div>
 							<div class="col-md-12">
 								<div class="group">
 									<select type="text" required id="document_type" name="document_type">

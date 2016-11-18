@@ -47,4 +47,14 @@
 			echo "<script type='text/javascript'> alert(Please check the '$error') </script>";
 		}
 	}
+
+
+	function print_notice_words($message) {
+		 $length = 50;
+		if(strlen($message) >= $length + 3) {
+			$message = substr($message, 0, $length) . '...';
+		}
+		return $message;
+	}
+
 ?>

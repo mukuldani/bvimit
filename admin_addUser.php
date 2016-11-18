@@ -46,7 +46,25 @@
 								if($role === "Faculty"){
 									$sqlInsertFaculty = "Insert into faculty (user_id) values ($currentUserId)";
 									if(mysqli_query($connection, $sqlInsertFaculty)){
-										echo '<script language="javascript"> alert("User account created"); </script>';
+										//Get the faculty ID from the table
+										$getFacultyId = "Select faculty_id, user_id from faculty where user_id = $currentUserId LIMIT 1";
+										$result_row = mysqli_query($connection, $getFacultyId);
+										if(mysqli_num_rows($result_row) == 1){
+											while($row = mysqli_fetch_array($result_row, MYSQLI_ASSOC)){
+												$faculty_id = $row["faculty_id"];
+												$user_id = $row["user_id"];
+											}
+											if($currentUserId === $user_id){
+												$updateUser = "Update user set faculty_id =  $faculty_id where user_id = $user_id";
+												if(mysqli_query($connection, $updateUser)){
+													echo '<script language="javascript"> alert("User account created"); </script>';
+												}else{
+													echo mysqli_error($connection);
+												}
+											}
+										}else{
+											echo mysqli_error($connection);
+										}
 									}else{
 										echo mysqli_error($connection);
 									}
@@ -119,6 +137,7 @@
 										<div class="group">
 											<select type="text" required id="role" name="role">
 												<option class="default"></option>
+												<option>Super Admin</option>
 												<option>Admin Admissions</option>
 												<option>Admin Examination</option>
 												<option>Admin Placements</option>
