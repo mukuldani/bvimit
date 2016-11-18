@@ -36,7 +36,7 @@
 										echo "<td>" .$row['email_id']. "</td>";
 										echo "<td>" .$row['mobile']. "</td>";
 										echo "<td>" .$row['role']. "</td>";
-										echo "<input type=\"radio\" name=".$row['user_id']." id=".$row['user_id'].">";
+										echo "<td><input type=\"checkbox\" name=".$row['user_id']." id=".$row['user_id']."></td>";
 									echo "</tr>";
 								}
 							echo "</tbody>";
@@ -52,7 +52,6 @@
 		echo mysqli_error($connection);
 	}
 ?>
-
 
 <!--Footer Admin-->
 <?php require('includes/footer_admin.php'); ?>
