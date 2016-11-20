@@ -1,7 +1,41 @@
 <!--Connection to Database-->
 <?php require_once('includes/connection.php'); ?>
+<!--Include Functions-->
+<?php require_once('includes/functions.php'); ?>
 <!--Header-->
 <?php include('includes/header.php'); ?>
+
+<?php
+			if(isset($_POST['btnSubmit'])){
+
+				// Form Validation
+				$errors = array();
+				$required_fields = array('name', 'email_id', 'phone_num', 'message');
+				$errors = array_merge($errors, check_required_field_errors($required_fields));
+
+				//$fiels_with_length = array('phone_num' => 10);
+				//$errors = array_merge($errors, check_max_field_lengths($required_fields));
+
+				if (!empty($errors)) {
+					display_errors($errors);
+				}
+
+				$name = mysql_prep($_POST['name']);
+				$email_id = mysql_prep($_POST['email_id']);
+				$phone_num = mysql_prep($_POST['phone_num']);
+				$message = mysql_prep($_POST['message']);
+
+				if(empty($errors)){
+					$query = "Insert into contact_us (name, email_id, phone_num, message) values ('$name', '$email_id', '$phone_num', '$message')";
+					if(mysqli_query($connection, $query)){
+						echo '<script language="javascript"> alert(Message has been sent. You will be contacted shortly)';
+					}else{
+						echo mysqli_error($connection);
+					}
+				}
+			}
+?>
+
 
 	<!--Cover Image Section:start-->
 	<section id="cover-admission">
@@ -27,7 +61,7 @@
 						</div>
 						<!--Conatct-us form-->
 						<div class="col-md-6 col-center-contactus">
-							<form class="contactus-text col-width-form" id="" method="post" autocomplete="off">
+							<form class="contactus-text col-width-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="" method="post" autocomplete="off">
 								<div class="group">
 									<input type="text" required id="name" name="name" />
 									<span class="highlight"></span>
@@ -36,14 +70,14 @@
 								</div>
 
 								<div class="group">
-									<input type="text" required id="email" name="email" />
+									<input type="text" required id="email_id" name="email_id" />
 									<span class="highlight"></span>
 									<span class="bar"></span>
 									<label>EMAIL ID</label>
 								</div>
 
 								<div class="group">
-									<input type="text" required id="phoneNo" name="phone" />
+									<input type="text" required id="phone_num" name="phone_num" />
 									<span class="highlight"></span>
 									<span class="bar"></span>
 									<label>PHONE NUMBER</label>
@@ -57,7 +91,7 @@
 								</div>
 
 								<div class="form-group" style="display:flex;justify-content:center;">
-									<button type="submit" class="btn btn-color" style="text-align:center" id="submit" onclick="return false;">SUBMIT</button>
+									<button type="submit" class="btn btn-color" style="text-align:center" id="btnSubmit" name="btnSubmit">SUBMIT</button>
 								</div>
 							</form>
 						</div>

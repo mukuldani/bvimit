@@ -50,7 +50,7 @@
 
 
 	function print_notice_words($message) {
-		 $length = 50;
+		 $length = 40;
 		if(strlen($message) >= $length + 3) {
 			$message = substr($message, 0, $length) . '...';
 		}

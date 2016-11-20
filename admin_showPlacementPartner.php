@@ -9,39 +9,76 @@
 <!--Header Admin-->
 <?php include('includes/header_admin.php'); ?>
 
+<!--Deleting Placement Partner Details-->
 <?php
-	$query = "Select * from placement_partner";
+	if(isset($_POST['btnDeletePlacementPartner'])){
+		$deletingPlacementPartnerId = array();
+		$deletingPlacementPartnerId = $_POST['placementPartnerId'];
+		$deletingPlacementPartnerIds = implode(',', $_POST['placementPartnerId']);
+		$queryDeletePlacementPartner = "Delete from placement_partner where placement_students_id IN ($deletingPlacementPartnerIds)";
+		if(mysqli_query($connection, $queryDeletePlacementPartner)){
+			echo "<script type=\"text/javascript\"> alert(Deletion Complete) </script>";
+		}else{
+			echo mysqli_error($connection);
+		}
+	}
+?>
 
-	$result = mysqli_query($connection, $query);
-	if(mysqli_num_rows($result) != 0){
-			echo "<div class=\"col-md-9 padding-top-30 show_users\">";
-				echo "<div class=\"panel\">";
-					echo "<div class=\"panel-heading\">";
-						echo "<h4> Placement Partners </h4>";
-					echo "</div>";
-					echo "<div class=\"panel-body\">";
-						echo "<table class=\"table\">";
-							echo "<thead>";
-								echo "<th>Partner Name</th>";
-							echo "</thead>";
-							echo "<tbody>";
+<!--Editing Placement Partner Details-->
+<?php
+	if(isset($_POST['btnEditPlacementPartner'])){
+		$editingPlacementPartnerId = array();
+		$editingPlacementPartnerId = $_POST['placementPartnerId'];
+		if((!empty($editingPlacementPartnerId)) && (sizeof($editingPlacementPartnerId) == 1)){
+			$editingPlacementPartnerId = implode(',', $_POST['placementPartnerId']);
+			$_SESSION["editingPlacementPartnerId"] = $editingPlacementPartnerId;
+			redirect_to("admin_editPlacementPartner.php");
+		}else{
+			echo "Select only one partner";
+		}
+	}
+?>
+
+<div class="col-md-9 padding-top-30 show_users">
+	<div class="panel">
+		<div class="panel-heading">
+			<h4> Placement Partners </h4>
+		</div>
+		<div class="panel-body">
+			<form name="Form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+				<table class="table">
+					<thead>
+						<th>Partner Name</th>
+						<th>Edit Details</th>
+					</thead>
+					<tbody>
+						<?php
+							$query = "Select * from placement_partner";
+							$result = mysqli_query($connection, $query);
+							if(mysqli_num_rows($result) != 0){
 								while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 									echo "<tr>";
 										echo "<td>" .$row['partner_name']. "</td>";
+										echo "<td><input type=\"checkbox\" name=\"placementPartnerId[]\" id=".$row['placement_partner_id']."></td>";
 									echo "</tr>";
 								}
-							echo "</tbody>";
-						echo "</table>";
-					echo "</div>";
-				echo "</div>";
-			echo "</div>";
-	}else if(mysqli_num_rows($result) == 0){
-		echo "<div class=\"col-md-9 padding-top-30 show_users\">";
-			echo "<h3 class=\"text-center\"> No records for the placement partners </h3>";
-		echo "</div>";
-	}else{
-		echo mysqli_error($connection);
-	}
-?>
+							}else if(mysqli_num_rows($result) == 0){
+								echo "<h3 class=\"text-center\"> No records for the placement partners </h3>";
+							}else{
+								echo mysqli_error($connection);
+							}
+						?>
+					</tbody>
+				</table>
+				<div class="col-md-4 float-right">
+					<button class="btn btn-primary " name="btnDeletePlacementPartner" id="btnDeletePlacementPartner"> Delete Partner </button>
+					<button class="btn btn-primary " name="btnEditPlacementPartner" id="btnEditPlacementPartner"> Edit Partner </button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
 <!--Footer Admin-->
 <?php require('includes/footer_admin.php'); ?>
