@@ -72,7 +72,7 @@
 					<div class="col-md-8 col-md-offset-2">
 						<fieldset>
 							<legend>
-								New User
+								Edit User
 							</legend>
 							<form name="Form" class="padding-10" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="off">
 								<div class="row">

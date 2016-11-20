@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2016 at 04:47 PM
+-- Generation Time: Nov 20, 2016 at 07:30 PM
 -- Server version: 5.7.15-log
 -- PHP Version: 5.5.12
 
@@ -26,6 +26,9 @@ USE `bvimit_db`;
 
 --
 -- Table structure for table `contact_us`
+--
+-- Creation: Nov 20, 2016 at 08:04 AM
+-- Last update: Nov 20, 2016 at 08:38 AM
 --
 
 DROP TABLE IF EXISTS `contact_us`;
@@ -53,6 +56,9 @@ INSERT INTO `contact_us` (`contactUs_id`, `name`, `email_id`, `phone_num`, `mess
 --
 -- Table structure for table `document`
 --
+-- Creation: Nov 18, 2016 at 05:54 PM
+-- Last update: Nov 20, 2016 at 02:44 PM
+--
 
 DROP TABLE IF EXISTS `document`;
 CREATE TABLE IF NOT EXISTS `document` (
@@ -79,6 +85,9 @@ INSERT INTO `document` (`document_id`, `document_title`, `document_file`, `docum
 
 --
 -- Table structure for table `faculty`
+--
+-- Creation: Nov 18, 2016 at 05:42 PM
+-- Last update: Nov 19, 2016 at 10:16 AM
 --
 
 DROP TABLE IF EXISTS `faculty`;
@@ -109,6 +118,9 @@ INSERT INTO `faculty` (`faculty_id`, `user_id`, `designation`, `qualification`, 
 
 --
 -- Table structure for table `notice`
+--
+-- Creation: Nov 18, 2016 at 05:53 PM
+-- Last update: Nov 20, 2016 at 12:13 PM
 --
 
 DROP TABLE IF EXISTS `notice`;
@@ -146,6 +158,9 @@ INSERT INTO `notice` (`notice_id`, `notice_title`, `notice_category`, `notice_wo
 --
 -- Table structure for table `placement_partner`
 --
+-- Creation: Nov 18, 2016 at 05:42 PM
+-- Last update: Nov 20, 2016 at 03:30 PM
+--
 
 DROP TABLE IF EXISTS `placement_partner`;
 CREATE TABLE IF NOT EXISTS `placement_partner` (
@@ -170,6 +185,9 @@ INSERT INTO `placement_partner` (`placement_partner_id`, `partner_name`, `partne
 
 --
 -- Table structure for table `placement_student`
+--
+-- Creation: Nov 18, 2016 at 05:42 PM
+-- Last update: Nov 19, 2016 at 03:07 AM
 --
 
 DROP TABLE IF EXISTS `placement_student`;
@@ -196,6 +214,9 @@ INSERT INTO `placement_student` (`placement_students_id`, `first_name`, `second_
 
 --
 -- Table structure for table `role`
+--
+-- Creation: Nov 18, 2016 at 05:42 PM
+-- Last update: Nov 19, 2016 at 10:16 AM
 --
 
 DROP TABLE IF EXISTS `role`;
@@ -226,6 +247,9 @@ INSERT INTO `role` (`role_id`, `user_id`, `role`) VALUES
 
 --
 -- Table structure for table `user`
+--
+-- Creation: Nov 18, 2016 at 05:42 PM
+-- Last update: Nov 19, 2016 at 10:16 AM
 --
 
 DROP TABLE IF EXISTS `user`;
