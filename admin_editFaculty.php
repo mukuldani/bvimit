@@ -24,7 +24,6 @@
 						$specialization = $row["specialization"];
 						$research_work = $row["research_work"];
 						$achievements = $row["achievements"];
-						$current_faculty_user_id = $row["user_id"];
 					}
 				}else{
 					echo mysqli_error($connection);

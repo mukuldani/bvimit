@@ -65,7 +65,7 @@
 										echo "<td>" .$row['second_name']. "</td>";
 										echo "<td>" .$row['email_id']. "</td>";
 										echo "<td>" .$row['mobile']. "</td>";
-										echo "<td><input type=\"checkbox\" name=\"facultyId[]\" id=".$row['faculty_id']."></td>";
+										echo "<td><input type=\"checkbox\" name=\"facultyId[]\" value=".$row['faculty_id']."></td>";
 									echo "</tr>";
 								}
 							}else if(mysqli_num_rows($result) == 0){

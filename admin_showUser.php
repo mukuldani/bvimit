@@ -67,7 +67,7 @@
 										echo "<td>" .$row['email_id']. "</td>";
 										echo "<td>" .$row['mobile']. "</td>";
 										echo "<td>" .$row['role']. "</td>";
-										echo "<td><input type=\"checkbox\" name=\"userId[]\" id=".$row['user_id']."></td>";
+										echo "<td><input type=\"checkbox\" name=\"userId[]\" value=".$row['user_id']."></td>";
 									echo "</tr>";
 								}
 							}else if(mysqli_num_rows($result) == 0){

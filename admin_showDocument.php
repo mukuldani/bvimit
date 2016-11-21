@@ -63,7 +63,7 @@
 											echo "<td>" .$row['document_title']. "</td>";
 											echo "<td>" .$row['document_type']. "</td>";
 											echo "<td>" .$row['document_date']. "</td>";
-											echo "<td><input type=\"checkbox\" name=\"documentId[]\" id=".$row['document_id']."></td>";
+											echo "<td><input type=\"checkbox\" name=\"documentId[]\" value=".$row['document_id']."></td>";
 										echo "</tr>";
 								}
 							}else if(mysqli_num_rows($result) == 0){

@@ -67,7 +67,7 @@
 										echo "<td>" .$row['company_placed']. "</td>";
 										echo "<td>" .$row['package_amt']. "</td>";
 										echo "<td>" .$row['date']. "</td>";
-										echo "<td><input type=\"checkbox\" name=\"placeStudentId[]\" id=".$row['placement_students_id']."></td>";
+										echo "<td><input type=\"checkbox\" name=\"placeStudentId[]\" value=".$row['placement_students_id']."></td>";
 									echo "</tr>";
 								}
 							}else if(mysqli_num_rows($result) == 0){

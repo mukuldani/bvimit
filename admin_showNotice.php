@@ -65,7 +65,7 @@
 										echo "<td>"; echo print_notice_words($row['notice_words']); echo"</td>";
 										echo "<td>" .$row['notice_category']. "</td>";
 										echo "<td>" .$row['date_uploaded']. "</td>";
-										echo "<td><input type=\"checkbox\" name=\"noticeId[]\" id=".$row['notice_id']."></td>";
+										echo "<td><input type=\"checkbox\" name=\"noticeId[]\" value=".$row['notice_id']."></td>";
 									echo "</tr>";
 								}
 							}else if(mysqli_num_rows($result) == 0){

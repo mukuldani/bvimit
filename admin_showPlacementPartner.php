@@ -59,7 +59,7 @@
 								while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 									echo "<tr>";
 										echo "<td>" .$row['partner_name']. "</td>";
-										echo "<td><input type=\"checkbox\" name=\"placementPartnerId[]\" id=".$row['placement_partner_id']."></td>";
+										echo "<td><input type=\"checkbox\" name=\"placementPartnerId[]\" value=".$row['placement_partner_id']."></td>";
 									echo "</tr>";
 								}
 							}else if(mysqli_num_rows($result) == 0){
