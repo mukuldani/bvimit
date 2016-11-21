@@ -37,7 +37,7 @@
 				$partner_name = mysql_prep($_POST['partner_name']);
 
 				if(empty($errors)){
-					$updatePlacementPartner = "Update placement_partner SET first_name = '$partner_name' where placement_partner_id = $placement_partner_id";
+					$updatePlacementPartner = "Update placement_partner SET partner_name = '$partner_name' where placement_partner_id = $placement_partner_id";
 					if(mysqli_query($connection, $updatePlacementPartner)){
 						echo '<script language="javascript"> alert("Partner details Updated"); </script>';
 					}else{

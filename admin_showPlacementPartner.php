@@ -14,12 +14,16 @@
 	if(isset($_POST['btnDeletePlacementPartner'])){
 		$deletingPlacementPartnerId = array();
 		$deletingPlacementPartnerId = $_POST['placementPartnerId'];
-		$deletingPlacementPartnerIds = implode(',', $_POST['placementPartnerId']);
-		$queryDeletePlacementPartner = "Delete from placement_partner where placement_students_id IN ($deletingPlacementPartnerIds)";
-		if(mysqli_query($connection, $queryDeletePlacementPartner)){
-			echo "<script type=\"text/javascript\"> alert(Deletion Complete) </script>";
+		if(sizeof($deletingPlacementPartnerId) == 0){
+			echo "<script type=\"text/javascript\"> alert(Select atleast one to delete) </script>";
 		}else{
-			echo mysqli_error($connection);
+			$deletingPlacementPartnerIds = implode(',', $_POST['placementPartnerId']);
+			$queryDeletePlacementPartner = "Delete from placement_partner where placement_partner_id IN ($deletingPlacementPartnerIds)";
+			if(mysqli_query($connection, $queryDeletePlacementPartner)){
+				echo "<script type=\"text/javascript\"> alert(Deletion Complete) </script>";
+			}else{
+				echo mysqli_error($connection);
+			}
 		}
 	}
 ?>

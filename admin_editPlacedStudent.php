@@ -26,7 +26,7 @@
 ?>
 
 <?php
-			if(isset($_POST['btnStudent'])){
+			if(isset($_POST['btnEditStudent'])){
 
 				// Form Validation
 				$errors = array();

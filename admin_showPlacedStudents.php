@@ -14,6 +14,7 @@
 	if(isset($_POST['btnDeletePlacedStudent'])){
 		$deletingPlacedStudentId = array();
 		$deletingPlacedStudentId = $_POST['placeStudentId'];
+
 		$deletingPlacedStudentIds = implode(',', $_POST['placeStudentId']);
 		$queryDeletePlacedStudent = "Delete from placement_student where placement_students_id IN ($deletingPlacedStudentIds)";
 		if(mysqli_query($connection, $queryDeletePlacedStudent)){
